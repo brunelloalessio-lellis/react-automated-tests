@@ -1,7 +1,7 @@
 import Output from "./Output";
 import { render,screen } from '@testing-library/react';
 
-describe("Output component tests", ()=>{
+describe("Output component", ()=>{
 
     test('paragraph created with text', ()=>{
 
