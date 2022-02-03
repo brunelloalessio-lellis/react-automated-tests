@@ -3,6 +3,8 @@ import userEvent from "@testing-library/user-event";
 import Greeting from "./Greeting";
 
 describe("Greeting component", () => {
+
+
   test("render Hello World as a text", () => {
     // Arrange
     render(<Greeting />);
@@ -17,6 +19,8 @@ describe("Greeting component", () => {
     expect(helloWorldElement).toBeInTheDocument();
   });
 
+
+
   test("renders proud to see you if button NOT clicked", () => {
     render(<Greeting />);
     const textNoClickElement = screen.getByText("to see you", {
@@ -24,6 +28,8 @@ describe("Greeting component", () => {
     });
     expect(textNoClickElement).toBeInTheDocument();
   });
+
+
 
   test('renders "Changed!" if button was clicked', () => {
     //Arrange
@@ -53,6 +59,8 @@ describe("Greeting component", () => {
     expect(textClickElement).toBeNull()
   });
 
+
+
   test('NOT RENDERS "Changed!" if button NOT clicked', () => {
     //Arrange
     render(<Greeting />);
@@ -63,4 +71,6 @@ describe("Greeting component", () => {
     const textClickElement = screen.queryByText("Changed!");
     expect(textClickElement).toBeNull()
   });
+
+  
 });
